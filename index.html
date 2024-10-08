@@ -1,104 +1,84 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <head>
-      <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-        <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
-        <h2>Student URN: 6862587</h2>
-      <hr>
-      <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
-      <hr>  
-      <title>Change Button Colour</title>
-    </head>
-    <body>
-      <button id="colourButton">Click me to change colour</button>
-    </body>
-      <!style for tables> 
-        <style>
-              table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 30%;
-
-              }
-
-              td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-              }
-
-              tr:nth-child(even) {
-                background-colour: #dddddd;
-              }
-
-
-
-          
-        </style>
-      <style>
-  p.ex1 {
-    margin-left: 250px;
-  }
-  </style>
-    </head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link  rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Change Button Colour</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-    .mySlides {display:none;}
+      .mySlides {
+        display: none;
+      }
+      table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 30%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      p.ex1 {
+        margin-left: 250px;
+      }
     </style>
-  <body style="background-color:#FFFFFF;margin-left:50px;">
-  <hr>
-    <h3 id="Abstract">Abstract</h3>
-  </p>
-                                
-  <!table of contents>
-  <table>
-
-  <tr>
-    <th><h3>Table of contents</h3></th>
-  </tr>
-  <tr>
-    <td><a href="#Abstract">Abstract</td>
-  </tr>
-  <tr>
-    <td><a href="#Introduction">Introduction</td>
-  </tr>
-  <tr>
-    <td><a href="#Analysis and discussions">Analysis and discussions</td>
-  </tr>
-
-  <tr>
-    <td><a href="#Refernces">Refernces</td>
-   </tr>
-  </table>
-
-  <p id="date&time"></p>
-
-  <script>
-  //Get a reference to the button element 
-  var button = document.getElementById("colorButton");
-
-  //Function to change button color
-  function changeColor() {
-    //Generate a random color (hexadecimal)
-    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-    //Set the button's background color to the random color 
-    button.style.backgroundColor = randomColor;
-  }
-
-  // Add a click event listener to the button
-  button.addEventListener("click",changeColor);
-  
-
-  //Javascript to display the date and time on my webpage
-
-  const d = new Date();
-  document.getElementByld("date&time").innerHTML = d;
-
-  </script>
-</body>
-</html>
+  </head>
+  <body style="background-color:#FFFFFF; margin-left:50px;">
+    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
+    <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
+    <h2>Student URN: 6862587</h2>
+    <hr>
+    <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
+    <hr>
     
+    <button id="colorButton">Click me to change colour</button>
+    <hr>
+    
+    <h3 id="Abstract">Abstract</h3>
+    
+    <!table of contents>
+    <table>
+      <tr>
+        <th><h3>Table of contents</h3></th>
+      </tr>
+      <tr>
+        <td><a href="#Abstract">Abstract</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Introduction">Introduction</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Analysis and discussions">Analysis and discussions</a></td>
+      </tr>
+      <tr>
+        <td><a href="#References">References</a></td>
+      </tr>
+    </table>
+    
+    <p id="date&time"></p>
+
+    <script>
+      // Get a reference to the button element 
+      var button = document.getElementById("colorButton");
+
+      // Function to change button color
+      function changeColor() {
+        // Generate a random color (hexadecimal)
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        // Set the button's background color to the random color 
+        button.style.backgroundColor = randomColor;
+      }
+
+      // Add a click event listener to the button
+      button.addEventListener("click", changeColor);
+
+      // Javascript to display the date and time on the webpage
+      const d = new Date();
+      document.getElementById("date&time").innerHTML = d;
+    </script>
+  </body>
+</html>
+
