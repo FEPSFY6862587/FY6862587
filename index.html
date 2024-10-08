@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
   <head>
     <head>
       <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
@@ -10,7 +9,11 @@
       <hr>
       <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
       <hr>  
+      <title>Change Button Colour</title>
     </head>
+    <body>
+      <button id="colourButton">Click me to change colour</button>
+    </body>
       <!style for tables> 
         <style>
               table {
@@ -74,6 +77,21 @@
   <p id="date&time"></p>
 
   <script>
+  //Get a reference to the button element 
+  var button = document.getElementById("colorButton");
+
+  //Function to change button color
+  function changeColor() {
+    //Generate a random color (hexadecimal)
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+    //Set the button's background color to the random color 
+    button.style.backgroundColor = randomColor;
+  }
+
+  // Add a click event listener to the button
+  button.addEventListener("click",changeColor);
+  
 
   //Javascript to display the date and time on my webpage
 
@@ -81,3 +99,6 @@
   document.getElementByld("date&time").innerHTML = d;
 
   </script>
+</body>
+</html>
+    
