@@ -5,26 +5,123 @@
     <title>Change Button Colour</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-      .mySlides {
-        display: none;
-      }
-      table {
-        font-family: Arial, sans-serif;
-        border-collapse: collapse;
-        width: 30%;
-      }
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
-      p.ex1 {
-        margin-left: 250px;
-      }
-    </style>
+  /* General Slide Styles */
+  .mySlides {
+    display: none;
+  }
+
+  /* Table Styling */
+  table {
+    font-family: 'Arial', sans-serif;
+    border-collapse: collapse;
+    width: 40%; /* Increased width for better readability */
+    margin: 20px auto; /* Center the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  th, td {
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    padding: 12px; /* Increased padding for better spacing */
+  }
+
+  th {
+    background-color: #f4f4f4; /* Softer header background */
+    color: #333; /* Darker text for contrast */
+  }
+
+  tr:nth-child(even) {
+    background-color: #fafafa; /* Lighter alternating row color */
+  }
+
+  tr:hover {
+    background-color: #f1f1f1; /* Highlight on hover for interactivity */
+  }
+
+  /* Indented Paragraph Styling */
+  p.ex1 {
+    margin-left: 20%; /* Consistent margin for better alignment */
+    margin-right: 20%; /* Center paragraph content */
+    line-height: 1.8; /* Improve readability with increased line height */
+    color: #444; /* Softer text color for readability */
+  }
+
+  /* Page Background and General Text */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Soft neutral background */
+    color: #222; /* Darker text for better contrast */
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    color: #333; /* Consistent heading color */
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+  }
+
+  h2, h3 {
+    margin-bottom: 10px;
+  }
+
+  /* Button Styling */
+  button {
+    background-color: #4CAF50; /* Pleasant green button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block; /* Center the button */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+
+  footer a {
+    color: #FFD700; /* Gold links in footer */
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    table {
+      width: 90%; /* Expand table width on small screens */
+    }
+
+    p.ex1 {
+      margin-left: 5%; /* Reduce margins for better fit */
+      margin-right: 5%;
+    }
+
+    h1 {
+      font-size: 2em; /* Adjust heading sizes */
+    }
+  }
+</style>
+
   </head>
   <body style="background-color:#FFFFFF; margin-left:50px;">
     <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
@@ -36,6 +133,26 @@
     
     <button id="colorButton">Click me to change colour</button>
     <hr>
+    
+    <!table of contents>
+    <table>
+      <tr>
+        <th><h3>Table of contents</h3></th>
+      </tr>
+      <tr>
+        <td><a href="#Abstract">Abstract</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Introduction">Introduction</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Analysis and discussions">Analysis and discussions</a></td>
+      </tr>
+      <tr>
+        <td><a href="#References">References</a></td>
+        
+      </tr>
+    </table>
     
     <h3 id="Abstract">Abstract</h3>
     AI has always been a very controversial topic. People are still unsure if it's safe and if the benefits outweigh the negatives.
@@ -124,25 +241,7 @@ Booth, H. and Pillay, T. (2024). How AI Is Being Used to Respond to Natural Disa
    
 </body>
     
-    <!table of contents>
-    <table>
-      <tr>
-        <th><h3>Table of contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract">Abstract</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Introduction">Introduction</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Analysis and discussions">Analysis and discussions</a></td>
-      </tr>
-      <tr>
-        <td><a href="#References">References</a></td>
-        
-      </tr>
-    </table>
+
     
     <p id="date&time"></p>
 
