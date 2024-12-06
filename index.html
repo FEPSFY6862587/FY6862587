@@ -43,7 +43,9 @@
     For instance, drones have started to frequently be used on battlefields in order to help check and clear buildings instead of sending soldiers. While this has helped keep casualties down, 
     the government fear that if they decide to implement AI into these drones or in other machinery, they could potentially cause more damage than good by running the risk that individual 
     companies or other countries will decide to follow this path which could lead to an AI war.  
-
+<Section id = "1">
+  
+    
     <h3 id="Analysis and discussions">Analysis and discussions</h3>
     The development of AI has been one of the most transformative technological advancements in human history.<a href="#1">  Recently, programmers have been able to create an AI model which can find and create
     drugs to cure specific diseases (Uknown: Killer Robots, 2023) </a>. The model was praised highly by the government and the creators behind it were asked to give a presentation at a talk show so they 
@@ -70,7 +72,7 @@
     healthcare and helping to tackle natural disasters, AI’s potential for good is staggering. However, its power also brings significant risks. Misuse, lack of regulation and ethical lapses could bring upon the deaths of many people 
     and could even be the start of another world war. Ultimately, the impact of AI depends on the choices we make. By prioritizing the ethical development when implementing AI into machinery, we can harness it as a force for positive transformation. 
     The future is in our hands, and how we use this powerful technology will define its legacy.
-
+</Section>
     <h3 id="References">References</h3>
     <section id="section5">
                 
@@ -158,7 +160,86 @@ Booth, H. and Pillay, T. (2024). How AI Is Being Used to Respond to Natural Disa
 
       // Add a click event listener to the button
       button.addEventListener("click", changeColor);
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'FEPSFY6862587';
+        const repo = 'FY6862587';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+    }
+    // Function to verify the last update time by re-fetching it from the API
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to display the time on page load
+    window.onload = getLastUpdatedTime;
+</script>
 
+
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("1");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
     </script>
   </body>
 </html>
